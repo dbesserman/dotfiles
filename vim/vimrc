@@ -1,3 +1,5 @@
+set encoding=utf-8
+set fileencoding=utf-8
 set number                      " Display line numbers beside buffer
 set nocompatible                " Don't maintain compatibilty with Vi.
 set hidden                      " Allow buffer change w/o saving

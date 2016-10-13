@@ -26,6 +26,11 @@ nmap <leader>so :source $MYVIMRC<cr>
 map <leader>w :w<cr>
 map <leader>wq :w<cr>:q<cr>
 
+" wrapping and highlight
+map <leader>no :let @/ = ""<cr>
+map <leader>yw :set wrap<cr>
+map <leader>nw :set nowrap<cr>
+
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
 

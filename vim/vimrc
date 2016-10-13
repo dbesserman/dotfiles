@@ -22,6 +22,10 @@ let mapleader = "\<Space>"
 nmap <leader>vi :tabedit ~/.vimrc<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 
+"save & quit
+map <leader>w :w<cr>
+map <leader>wq :w<cr>:q<cr>
+
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
 

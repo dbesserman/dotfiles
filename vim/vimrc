@@ -6,10 +6,6 @@ set backspace=indent,eol,start  " Sane backspace behavior
 set history=1000                " Remember last 1000 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
 
-let mapleader = "\<Space>"
-nmap <leader>vi :tabedit ~/.vimrc<cr>
-nmap <leader>so :source $MYVIMRC<cr>
-
 nmap 0 ^
 nmap 0 $
 
@@ -17,11 +13,15 @@ nmap 0 $
 nmap j gj
 nmap k gk
 
+imap jk <esc>
+imap kj <esc>
+
+let mapleader = "\<Space>"
+nmap <leader>vi :tabedit ~/.vimrc<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
 
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
-
-imap jk <esc>
-imap kj <esc>

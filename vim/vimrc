@@ -17,5 +17,8 @@ nmap 0 $
 nmap j gj
 nmap k gk
 
+" Pre-populate a split command with the current directory
+nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
+
 imap jk <esc>
 imap kj <esc>

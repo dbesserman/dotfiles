@@ -17,6 +17,9 @@ nmap 0 $
 nmap j gj
 nmap k gk
 
+" Copy the entire buffer into the system register
+nmap <leader>co ggVG*y
+
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 

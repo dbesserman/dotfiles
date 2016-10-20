@@ -48,6 +48,12 @@ map <leader>no :let @/ = ""<cr>
 map <leader>yw :set wrap<cr>
 map <leader>nw :set nowrap<cr>
 
+" pry
+map <leader>pr obinding.pry<esc>==
+map <leader>pR Obinding.pry<esc>==
+map <leader>Pr orequire 'pry'; binding.pry<esc>==
+map <leader>PR Orequire 'pry'; binding.pry<esc>==
+
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
 

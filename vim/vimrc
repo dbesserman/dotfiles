@@ -15,6 +15,9 @@ set relativenumber
 set nobackup
 set nowritebackup
 set noswapfile
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 nmap 0 ^
 

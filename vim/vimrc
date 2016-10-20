@@ -11,14 +11,13 @@ set scrolloff=4                 " Keep at least 4 lines below cursor
 set relativenumber
 
 nmap 0 ^
-nmap 0 $
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
 nmap k gk
 
-imap jk <esc>
-imap kj <esc>
+imap jk <esc>:w<cr>
+imap kj <esc>:w<cr>
 
 let mapleader = "\<Space>"
 nmap <leader>vi :tabedit ~/.vimrc<cr>

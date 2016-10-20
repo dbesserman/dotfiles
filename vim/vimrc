@@ -25,6 +25,7 @@ nmap <leader>so :source $MYVIMRC<cr>
 
 "save & quit
 map <leader>w :w<cr>
+map <leader>q :q<cr>
 map <leader>wq :w<cr>:q<cr>
 
 " wrapping and highlight

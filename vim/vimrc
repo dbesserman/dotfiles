@@ -19,6 +19,15 @@ nmap 0 ^
 nmap j gj
 nmap k gk
 
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 imap jk <esc>:w<cr>
 imap kj <esc>:w<cr>
 

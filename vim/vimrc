@@ -22,6 +22,11 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
+
 nmap 0 ^
 
 " Move up and down by visible lines if current line is wrapped

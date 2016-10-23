@@ -53,6 +53,7 @@ nmap <leader>so :source $MYVIMRC<cr>
 map <leader>w :w<cr>
 map <leader>q :q<cr>
 map <leader>wq :w<cr>:q<cr>
+map <leader>Q :on<cr>
 
 " wrapping and highlight
 map <leader>no :let @/ = ""<cr>

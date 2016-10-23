@@ -60,6 +60,10 @@ map <leader>PR Orequire 'pry'; binding.pry<esc>==
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
 
+" navigating between tabs
+map <leader>tp gT
+map <leader>tn gt
+
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 

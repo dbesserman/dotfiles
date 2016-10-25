@@ -76,6 +76,12 @@ map <leader>tn gt
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 
+" html 5 tags
+syn keyword htmlTagName contained article aside audio canvas command datalist
+syn keyword htmlTagName contained details embed figcaption figure footer header
+syn keyword htmlTagName contained hgroup keygen mark meter nav output progress
+syn keyword htmlTagName contained rp rt ruby section source summary time video
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

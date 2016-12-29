@@ -13,14 +13,19 @@ set hlsearch                    " highlight matches
 set ignorecase
 set smartcase
 set showcmd                     " display incomplete commands
-set cursorline
 set relativenumber
 set nobackup
 set nowritebackup
+set breakindent
 set noswapfile
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set smartindent
+
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 set winwidth=84
 set winheight=5

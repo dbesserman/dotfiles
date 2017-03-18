@@ -1,0 +1,13 @@
+[alias]
+  sla = log --oneline --decorate --graph --all
+  glog = log -E -i --grep
+  car = commit --amend --no-edit
+  unstage = reset
+  uncommit = reset --soft HEAD^
+  aa = add --all
+  b = branch
+  co = checkout
+  df = diff --word-diff --color-words
+[user]
+	name = David Besserman
+	email = david.besserman@gmail.com

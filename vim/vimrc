@@ -78,6 +78,18 @@ nmap <leader>co ggVG*y
 map <leader>tp gT
 map <leader>tn gt
 
+" vtr
+map <leader>rs
+map <leader>ra :VtrAttachToPane<cr>
+map <leader>rz :VtrFocusRunner<cr>
+map <leader>ro :VtrOpenRunner<cr>
+map <leader>rx :VtrKillRunner<cr>
+map <leader>rl :VtrClearRunner<cr>
+map <leader>rs :VtrSendCommandToRunner 
+map <leader>rd :VtrSendCtrlD<cr>
+map <leader>sc :VtrSendCommandToRunner<cr>
+map <leader>sv :VtrSendLinesToRunner<cr>
+
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 

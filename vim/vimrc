@@ -79,7 +79,6 @@ map <leader>tp gT
 map <leader>tn gt
 
 " vtr
-map <leader>rs
 map <leader>ra :VtrAttachToPane<cr>
 map <leader>rz :VtrFocusRunner<cr>
 map <leader>ro :VtrOpenRunner<cr>

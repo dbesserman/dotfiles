@@ -89,6 +89,9 @@ map <leader>rd :VtrSendCtrlD<cr>
 map <leader>sc :VtrSendCommandToRunner<cr>
 map <leader>sv :VtrSendLinesToRunner<cr>
 
+" change quote
+map <leader>' F'cs'"
+
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 

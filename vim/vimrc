@@ -89,6 +89,12 @@ map <leader>rd :VtrSendCtrlD<cr>
 map <leader>sc :VtrSendCommandToRunner<cr>
 map <leader>sv :VtrSendLinesToRunner<cr>
 
+" RSpec.vim mappings
+map <Leader>sf :call RunCurrentSpecFile()<CR>
+map <Leader>sn :call RunNearestSpec()<CR>
+map <Leader>sp :call RunLastSpec()<CR>
+map <Leader>sa :call RunAllSpecs()<CR>
+
 " change quote
 map <leader>' F'cs'"
 

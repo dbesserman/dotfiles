@@ -90,10 +90,11 @@ map <leader>sc :VtrSendCommandToRunner<cr>
 map <leader>sv :VtrSendLinesToRunner<cr>
 
 " RSpec.vim mappings
-map <Leader>tf :call RunCurrentSpecFile()<CR>
-map <Leader>ts :call RunNearestSpec()<CR>
-map <Leader>tp :call RunLastSpec()<CR>
-map <Leader>ta :call RunAllSpecs()<CR>
+let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
+map <Leader>tf :call RunCurrentSpecFile()<CR>:VtrFocusRunner<cr>
+map <Leader>ts :call RunNearestSpec()<CR>:VtrFocusRunner<cr>
+map <Leader>tp :call RunLastSpec()<CR>:VtrFocusRunner<cr>
+map <Leader>ta :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
 
 " change quote
 map <leader>' F'cs'"

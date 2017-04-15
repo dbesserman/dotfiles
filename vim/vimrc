@@ -108,6 +108,10 @@ syn keyword htmlTagName contained details embed figcaption figure footer header
 syn keyword htmlTagName contained hgroup keygen mark meter nav output progress
 syn keyword htmlTagName contained rp rt ruby section source summary time video
 
+" coffeescript
+map <Leader>sk :CoffeeCompile vert<cr>
+map <Leader>sr :CoffeeRun<cr>
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -146,6 +150,7 @@ Plugin 'rking/ag.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kana/vim-textobj-user'

@@ -20,3 +20,5 @@ else
   fi
   tmux switch-client -t "$session_name"
 fi
+
+# echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc

@@ -96,6 +96,9 @@ map <Leader>ts :call RunNearestSpec()<CR>:VtrFocusRunner<cr>
 map <Leader>tp :call RunLastSpec()<CR>:VtrFocusRunner<cr>
 map <Leader>ta :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
 
+" copy mode
+map <Leader>y :set invnumber<CR>:set invrelativenumber<CR>
+
 " change quote
 map <leader>' F'cs'"
 

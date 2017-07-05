@@ -8,6 +8,9 @@
   b = branch
   co = checkout
   df = diff --word-diff --color-words
+  ctags = !.git/hooks/ctags
 [user]
 	name = David Besserman
 	email = david.besserman@gmail.com
+[init]
+	templatedir = ~/.git_template

@@ -118,6 +118,13 @@ syn keyword htmlTagName contained details embed figcaption figure footer header
 syn keyword htmlTagName contained hgroup keygen mark meter nav output progress
 syn keyword htmlTagName contained rp rt ruby section source summary time video
 
+" flexbox tags
+syn keyword cssFontProp order
+syn match cssFontProp contained "\<flex\(-\(basis\|direction\|flow\|grow\|shrink\|wrap\)\)\=\>"
+syn keyword cssFontAttr contained flex row wrap
+syn match cssFontAttr contained "\<inline-flex\>"
+syn match cssFontAttr contained "\<\(row\|column\|wrap\)-reverse\>"
+
 " coffeescript
 map <Leader>sk :CoffeeCompile vert<cr>
 map <Leader>sr :CoffeeRun<cr>
@@ -162,6 +169,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'rking/ag.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'mattn/emmet-vim'
+Plugin 'hail2u/vim-css3-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'

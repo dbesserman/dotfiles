@@ -90,6 +90,12 @@ map <leader>rd :VtrSendCtrlD<cr>
 map <leader>sc :VtrSendCommandToRunner<cr>
 map <leader>sv :VtrSendLinesToRunner<cr>
 
+" NERDTree
+map <leader>nt :NERDTreeToggle<cr>
+
+" GitGutter
+map <leader>gi :GitGutterToggle<cr>
+
 " RSpec.vim mappings
 let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
 map <Leader>tf :call RunCurrentSpecFile()<CR>:VtrFocusRunner<cr>
@@ -98,7 +104,7 @@ map <Leader>tp :call RunLastSpec()<CR>:VtrFocusRunner<cr>
 map <Leader>ta :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
 
 " copy mode
-map <Leader>y :set invnumber<CR>:set invrelativenumber<CR>
+map <Leader>y :set invnumber<CR>:set invrelativenumber<CR>:GitGutterToggle<CR>
 
 " change quote
 map <leader>' F'cs'"
@@ -166,6 +172,9 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'sickill/vim-pasta'
 Plugin 'scrooloose/syntastic'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'scrooloose/nerdtree'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

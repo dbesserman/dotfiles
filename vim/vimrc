@@ -101,10 +101,14 @@ map <leader>sm :smile<cr>
 
 " RSpec.vim mappings
 let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
-map <Leader>tf :call RunCurrentSpecFile()<CR>:VtrFocusRunner<cr>
-map <Leader>ts :call RunNearestSpec()<CR>:VtrFocusRunner<cr>
-map <Leader>tp :call RunLastSpec()<CR>:VtrFocusRunner<cr>
-map <Leader>ta :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
+map <Leader>tf :call RunCurrentSpecFile()<CR>
+map <Leader>tF :call RunCurrentSpecFile()<CR>:VtrFocusRunner<cr>
+map <Leader>ts :call RunNearestSpec()<CR>
+map <Leader>tS :call RunNearestSpec()<CR>:VtrFocusRunner<cr>
+map <Leader>tp :call RunLastSpec()<CR>
+map <Leader>tP :call RunLastSpec()<CR>:VtrFocusRunner<cr>
+map <Leader>ta :call RunAllSpecs()<CR>
+map <Leader>tA :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
 
 " copy mode
 map <Leader>y :set invnumber<CR>:set invrelativenumber<CR>:GitGutterToggle<CR>

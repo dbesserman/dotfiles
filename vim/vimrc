@@ -95,6 +95,9 @@ map <leader>nt :NERDTreeToggle<cr>
 
 " GitGutter
 map <leader>gi :GitGutterToggle<cr>
+map <leader>gb :Gblame<cr>
+
+map <leader>sm :smile<cr>
 
 " RSpec.vim mappings
 let g:rspec_command = "call VtrSendCommand('rspec {spec}')"

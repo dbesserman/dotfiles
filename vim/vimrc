@@ -140,11 +140,17 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <leader>sub :%s///g<left><left>
 vnoremap <leader>sub :s///g<left><left>
 
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
+let g:closetag_xhtml_filenames = '*.js,*.xhtml,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
 let g:closetag_shortcut = '>'
+
+nnoremap <leader>e :Emmet 
+
+if has('nvim')
+  let g:loaded_sensible=0
+endif
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -186,6 +192,7 @@ Plugin 'tmhedberg/matchit'
 Plugin 'mattn/emmet-vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'pangloss/vim-javascript'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'kana/vim-textobj-user'
 Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'ecomba/vim-ruby-refactoring'

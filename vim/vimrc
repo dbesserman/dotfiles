@@ -26,7 +26,6 @@ set smartindent
 
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 set winwidth=84
 set winheight=5

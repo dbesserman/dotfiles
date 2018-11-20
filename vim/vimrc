@@ -23,6 +23,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set smartindent
+source ~/.vim/color/dracula.vim " color scheme
 
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white

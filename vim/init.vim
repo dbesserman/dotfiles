@@ -178,8 +178,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'neoclide/coc-solargraph'
 Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'jgdavey/vim-blockle'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'

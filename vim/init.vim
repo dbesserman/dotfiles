@@ -151,11 +151,14 @@ map <Leader>tP :call RunLastSpec()<CR>:VtrFocusRunner<cr>
 map <Leader>ta :call RunAllSpecs()<CR>
 map <Leader>tA :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
 
+map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
+
 call plug#begin('~/.vim/plugged')
 " Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
@@ -181,6 +184,8 @@ Plug 'Quramy/tsuquyomi'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'jgdavey/vim-blockle'
+Plug 'elixir-editors/vim-elixir'
+Plug 'jreybert/vimagit'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'

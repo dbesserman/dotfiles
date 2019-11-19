@@ -157,7 +157,6 @@ nmap <silent> t<C-l> :TestLast<CR>
 map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
 
 call plug#begin('~/.vim/plugged')
-" Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
@@ -193,6 +192,3 @@ call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
-
-" let b:ale_linters = {'javascript': ['eslint']}
-" let b:ale_fixers = {'javascript': ['prettier', 'eslint']}

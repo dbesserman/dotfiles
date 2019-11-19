@@ -23,10 +23,10 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set smartindent
-set winwidth=84
-set winheight=5
-set winminheight=5
-set winheight=999
+" set winwidth=84
+" set winheight=5
+" set winminheight=5
+" set winheight=999
 
 """coc.vim setup
 set cmdheight=2 " Better display for messages
@@ -133,12 +133,19 @@ nmap <leader>so :source ~/.config/nvim/init.vim<cr>
 map <leader>nt :NERDTreeToggle<cr>
 
 " GitGutter
-map <leader>gi :GitGutterToggle<cr>
+" map <leader>gi :GitGutterToggle<cr>
 map <leader>gb :Gblame<cr>
 
 " Substitution
 nnoremap <leader>sub :%s///g<left><left>
 vnoremap <leader>sub :s///g<left><left>
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+nnoremap <leader>f :Format<cr>
+
+" use `:OR` for organize import of current buffer
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " RSpec.vim mappings
 let g:rspec_command = "call VtrSendCommand('rspec {spec}')"

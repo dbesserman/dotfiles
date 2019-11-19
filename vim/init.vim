@@ -146,16 +146,13 @@ nnoremap <leader>f :Format<cr>
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" RSpec.vim mappings
-let g:rspec_command = "call VtrSendCommand('rspec {spec}')"
-map <Leader>tf :call RunCurrentSpecFile()<CR>
-map <Leader>tF :call RunCurrentSpecFile()<CR>:VtrFocusRunner<cr>
-map <Leader>ts :call RunNearestSpec()<CR>
-map <Leader>tS :call RunNearestSpec()<CR>:VtrFocusRunner<cr>
-map <Leader>tp :call RunLastSpec()<CR>
-map <Leader>tP :call RunLastSpec()<CR>:VtrFocusRunner<cr>
-map <Leader>ta :call RunAllSpecs()<CR>
-map <Leader>tA :call RunAllSpecs()<CR>:VtrFocusRunner<cr>
+let test#strategy = "vtr"
+
+" " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
 
 map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
 
@@ -174,7 +171,7 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
 Plug 'rking/ag.vim'
-Plug 'https://github.com/dbesserman/vim-rspec'
+Plug 'janko/vim-test'
 Plug 'tmhedberg/matchit'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'

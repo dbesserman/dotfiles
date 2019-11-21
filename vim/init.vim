@@ -149,10 +149,10 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 let test#strategy = "vtr"
 " " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> <C-t><C-n> :TestNearest<CR>
+nmap <silent> <C-t><C-f> :TestFile<CR>
+nmap <silent> <C-t><C-a> :TestSuite<CR>
+nmap <silent> <C-t><C-p> :TestLast<CR>
 
 map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
 

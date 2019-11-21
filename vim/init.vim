@@ -127,7 +127,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 nmap <leader>nv :tabedit ~/.config/nvim/init.vim<cr>
-nmap <leader>sr :source ~/.config/nvim/init.vim<cr>
+nmap <leader>so :source ~/.config/nvim/init.vim<cr>
+
 
 " NERDTree
 map <leader>nt :NERDTreeToggle<cr>

@@ -23,6 +23,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set smartindent
+set rtp+=/usr/local/opt/fzf
 " set winwidth=84
 " set winheight=5
 " set winminheight=5
@@ -147,7 +148,6 @@ nnoremap <leader>f :Format<cr>
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 let test#strategy = "vtr"
-
 " " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
@@ -155,6 +155,17 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 
 map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
+
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': '10new' }
+
+nmap <C-p>a :FZF<CR>
+nmap <C-p>b :Buffer<CR>
+nmap <C-p>l :Lines<CR>
+nmap <C-p><C-l> :BLines<CR>
+nmap <C-p>h :History<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
@@ -169,7 +180,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
-Plug 'rking/ag.vim'
 Plug 'janko/vim-test'
 Plug 'tmhedberg/matchit'
 Plug 'mattn/emmet-vim'
@@ -184,10 +194,11 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'neoclide/coc-solargraph'
 Plug 'Quramy/tsuquyomi'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'kien/ctrlp.vim'
 Plug 'jgdavey/vim-blockle'
 Plug 'elixir-editors/vim-elixir'
 Plug 'jreybert/vimagit'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'

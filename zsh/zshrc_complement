@@ -1,0 +1,5 @@
+alias vi=nvim
+alias gfz='git checkout $(git branch | fzf)'
+alias phs='source ./config/.env && iex -S mix phx.server'
+
+export PATH="/Users/dbesserman/bin:$PATH"

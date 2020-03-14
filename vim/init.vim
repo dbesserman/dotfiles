@@ -147,6 +147,8 @@ vnoremap <leader>sub :s///g<left><left>
 command! -nargs=0 Format :call CocAction('format')
 nnoremap <leader>f :Format<cr>
 
+nmap <leader>a :A<CR>
+
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 

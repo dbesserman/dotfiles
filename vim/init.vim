@@ -29,6 +29,9 @@ set rtp+=/usr/local/opt/fzf
 " set winminheight=5
 " set winheight=999
 
+"set Vim Tmux Runner when vim opens
+autocmd VimEnter * VtrAttachToPane
+
 """coc.vim setup
 set cmdheight=2 " Better display for messages
 set updatetime=300
@@ -128,7 +131,6 @@ nmap ga <Plug>(EasyAlign)
 
 nmap <leader>nv :tabedit ~/.config/nvim/init.vim<cr>
 nmap <leader>so :source ~/.config/nvim/init.vim<cr>
-
 
 " NERDTree
 map <leader>nt :NERDTreeToggle<cr>

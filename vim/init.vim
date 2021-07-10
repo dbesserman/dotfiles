@@ -3,7 +3,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set number                      " Display line numbers beside buffer
 set nocompatible                " Don't maintain compatibilty with Vi.
-filetype off                    " required for vundle
+filetype on
+filetype plugin indent on
 set hidden                      " Allow buffer change w/o saving
 set lazyredraw                  " Don't update while executing macros
 set backspace=indent,eol,start  " Sane backspace behavior
@@ -56,7 +57,7 @@ endfunction
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
@@ -144,7 +145,7 @@ nnoremap <leader>sub :%s///g<left><left>
 vnoremap <leader>sub :s///g<left><left>
 
 " Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
+" command! -nargs=0 Format :call CocAction('format')
 nnoremap <leader>f :Format<cr>
 
 nmap <leader>a :A<CR>
@@ -160,6 +161,10 @@ nmap <silent> <C-t><C-a> :TestSuite<CR>
 nmap <silent> <C-t><C-p> :TestLast<CR>
 
 map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
+map <leader>pmt :VtrSendCommandToRunner rails run_post_migrations_task<cr>
+map <leader>mgt :VtrSendCommandToRunner rails db:migrate RAILS_ENV=test<cr>
+map <leader>mgd :VtrSendCommandToRunner rails db:migrate<cr>
+map <leader>gmdm :VtrSendCommandToRunner rails g multiple_domained_models<cr>
 
 " In Neovim, you can set up fzf window using a Vim command
 let g:fzf_layout = { 'window': 'enew' }
@@ -169,8 +174,10 @@ let g:fzf_layout = { 'window': '10new' }
 nmap <C-p>a :FZF<CR>
 nmap <C-p>b :Buffer<CR>
 nmap <C-p>l :Lines<CR>
-nmap <C-p><C-l> :BLines<CR>
+nmap <C-p><C-l>; :BLines<CR>
 nmap <C-p>h :History<CR>
+
+imap <C-l> <Plug>(coc-snippets-expand)
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
@@ -181,6 +188,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-projectionist'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'benmills/vimux'
@@ -204,6 +212,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'jreybert/vimagit'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'

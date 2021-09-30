@@ -165,6 +165,7 @@ map <leader>pmt :VtrSendCommandToRunner rails run_post_migrations_task<cr>
 map <leader>mgt :VtrSendCommandToRunner rails db:migrate RAILS_ENV=test<cr>
 map <leader>mgd :VtrSendCommandToRunner rails db:migrate<cr>
 map <leader>gmdm :VtrSendCommandToRunner rails g multiple_domained_models<cr>
+map <leader>rbc :VtrSendCommandToRunner bundle exec rubocop<cr>
 
 " In Neovim, you can set up fzf window using a Vim command
 let g:fzf_layout = { 'window': 'enew' }

@@ -33,42 +33,6 @@ set rtp+=/usr/local/opt/fzf
 "set Vim Tmux Runner when vim opens
 autocmd VimEnter * VtrAttachToPane
 
-"""coc.vim setup
-set cmdheight=2 " Better display for messages
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" add a float window with hover information
-nmap <leader>h :call CocAction('doHover')<cr>
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  " autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-""" end of coc.vim setup
-
 source ~/.vim/colors/dracula.vim " color scheme
 
 nmap 0 ^
@@ -144,15 +108,6 @@ map <leader>gb :Gblame<cr>
 nnoremap <leader>sub :%s///g<left><left>
 vnoremap <leader>sub :s///g<left><left>
 
-" Use `:Format` to format current buffer
-" command! -nargs=0 Format :call CocAction('format')
-nnoremap <leader>f :Format<cr>
-
-nmap <leader>a :A<CR>
-
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
 let test#strategy = "vtr"
 " " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
 nmap <silent> <C-t><C-n> :TestNearest<CR>
@@ -161,10 +116,10 @@ nmap <silent> <C-t><C-a> :TestSuite<CR>
 nmap <silent> <C-t><C-p> :TestLast<CR>
 
 map <leader>rcp :VtrSendCommandToRunner recompile()<cr>
-map <leader>pmt :VtrSendCommandToRunner rails run_post_migrations_task<cr>
-map <leader>mgt :VtrSendCommandToRunner rails db:migrate RAILS_ENV=test<cr>
-map <leader>mgd :VtrSendCommandToRunner rails db:migrate<cr>
-map <leader>gmdm :VtrSendCommandToRunner rails g multiple_domained_models<cr>
+map <leader>pmt :VtrSendCommandToRunner bundle exec rails run_post_migrations_task<cr>
+map <leader>mgt :VtrSendCommandToRunner bundle exec rails db:migrate RAILS_ENV=test<cr>
+map <leader>mgd :VtrSendCommandToRunner bundle exec rails db:migrate<cr>
+map <leader>gmdm :VtrSendCommandToRunner bundle exec rails g multiple_domained_models<cr>
 map <leader>rbc :VtrSendCommandToRunner bundle exec rubocop<cr>
 
 " In Neovim, you can set up fzf window using a Vim command
@@ -177,8 +132,6 @@ nmap <C-p>b :Buffer<CR>
 nmap <C-p>l :Lines<CR>
 nmap <C-p><C-l>; :BLines<CR>
 nmap <C-p>h :History<CR>
-
-imap <C-l> <Plug>(coc-snippets-expand)
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
@@ -204,8 +157,6 @@ Plug 'ecomba/vim-ruby-refactoring'
 Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/vim-easy-align'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'neoclide/coc-solargraph'
 Plug 'Quramy/tsuquyomi'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jgdavey/vim-blockle'

@@ -1,7 +1,5 @@
 mkdir -p ~/.config/nvim
-cp ~/Documents/dotfiles/vim/init.vim ~/.config/nvim/init.vim
-mkdir -p ~/.vim/colors
-cp ~/Documents/dotfiles/vim/dracula.vim ~/.vim/colors/dracula.vim
+cp ~/Documents/dotfiles/vim/init.lua ~/.config/nvim/init.lua
 
 cp ~/Documents/dotfiles/git/gitconfig ~/.gitconfig
 

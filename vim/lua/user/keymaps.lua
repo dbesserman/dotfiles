@@ -87,3 +87,12 @@ keymap("n", "<C-p>a", "<CMD>Telescope find_files<CR>", opts)
 
 -- toggle NvimTree
 keymap("n", "<Leader>nt", "<CMD>NvimTreeToggle<CR>", opts)
+
+-- Alternate
+keymap("n", "<C-a>", "<CMD>A<CR>", opts)
+
+-- test
+keymap("n", "<C-t>p", "<CMD>TestLast<CR>", opts)
+keymap("n", "<C-t>n", "<CMD>TestNearest<CR>", opts)
+keymap("n", "<C-t>a", "<CMD>TestSuite<CR>", opts)
+keymap("n", "<C-t>f", "<CMD>TestFile<CR>", opts)

@@ -3,8 +3,11 @@ theme = "onedark"
 [editor]
 line-number = "relative"
 mouse = false
-shell = ["zsh"]
+# shell = ["zsh"]
 cursorline = true
+auto-completion = true
+auto-format = true
+auto-info	= true
 
 [editor.statusline]
 left = ["mode", "spinner"]

@@ -3,5 +3,5 @@
 ## Setup
 
 ```
-$ curl https://raw.githubusercontent.com/dbesserman/dotfiles/master/setup.sh | sh
+curl https://raw.githubusercontent.com/dbesserman/dotfiles/master/setup.sh | sh
 ```

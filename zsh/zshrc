@@ -1,7 +1,7 @@
-export ZSH_CONFIG_DIRECTORY_PATH='~/Documents/dotfiles/zsh/config'
+export ZSH_CONFIG_DIRECTORY_PATH=~/Documents/dotfiles/zsh/config
 
-source "${ZSH_CONFIG_DIRECTORY_PATH}"/zplug.zsh
-source "${ZSH_CONFIG_DIRECTORY_PATH}"/languages.zsh
-source "${ZSH_CONFIG_DIRECTORY_PATH}"/packages.zsh
-source "${ZSH_CONFIG_DIRECTORY_PATH}"/aliases.zsh
-source "${ZSH_CONFIG_DIRECTORY_PATH}"/path.zsh
+source "${ZSH_CONFIG_DIRECTORY_PATH}/zplug.zsh"
+source "${ZSH_CONFIG_DIRECTORY_PATH}/languages.zsh"
+source "${ZSH_CONFIG_DIRECTORY_PATH}/packages.zsh"
+source "${ZSH_CONFIG_DIRECTORY_PATH}/aliases.zsh"
+source "${ZSH_CONFIG_DIRECTORY_PATH}/path.zsh"

@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "nightfox"
 
 [editor]
 line-number = "relative"
@@ -8,6 +8,7 @@ cursorline = true
 auto-completion = true
 auto-format = true
 auto-info	= true
+bufferline = "always"
 
 [editor.statusline]
 left = ["mode", "spinner"]

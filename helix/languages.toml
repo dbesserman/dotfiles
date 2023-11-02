@@ -1,131 +1,18 @@
-# ruby
+[language-server]
+
+yaml-language-server = { command = "yaml-language-server", args = ["--stdio"] }
 
 [[language]]
-name = "ruby"
-scope = "source.ruby"
-injection-regex = "ruby"
-file-types = ["rb", "rake", "rakefile", "irb", "gemfile", "gemspec", "Rakefile", "Gemfile", "rabl", "jbuilder", "jb"]
-shebangs = ["ruby"]
+name = "yaml"
+scope = "source.yaml"
+file-types = ["yml", "yaml"]
 roots = []
 comment-token = "#"
-language-server = { command = "solargraph", args = ["stdio"] }
 indent = { tab-width = 2, unit = "  " }
+language-servers = [ "yaml-language-server", "ansible-language-server" ]
+injection-regex = "yml|yaml"
 
 [[grammar]]
-name = "ruby"
-source = { git = "https://github.com/tree-sitter/tree-sitter-ruby", rev = "4c600a463d97e36a0ca5ac57e11f3ac8c297a0fa" }
+name = "yaml"
+source = { git = "https://github.com/ikatyang/tree-sitter-yaml", rev = "0e36bed171768908f331ff7dff9d956bae016efb" }
 
-[[auto-pairs]]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
-'<' = '>'
-'do' = 'end'
-
-# Javascript & Typescript
-
-[[language]]
-name = "javascript"
-scope = "source.js"
-injection-regex = "(js|javascript)"
-file-types = ["js", "mjs", "cjs"]
-shebangs = ["node"]
-roots = []
-comment-token = "//"
-# TODO: highlights-params
-language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "javascript" }
-indent = { tab-width = 2, unit = "  " }
-
-[language.debugger]
-name = "node-debug2"
-transport = "stdio"
-# args consisting of cmd (node) and path to adapter should be added to user's configuration
-quirks = { absolute-paths = true }
-
-[[language.debugger.templates]]
-name = "source"
-request = "launch"
-completion = [ { name = "main", completion = "filename", default = "index.js" } ]
-args = { program = "{0}" }
-
-[[grammar]]
-name = "javascript"
-source = { git = "https://github.com/tree-sitter/tree-sitter-javascript", rev = "4a95461c4761c624f2263725aca79eeaefd36cad" }
-
-[[language]]
-name = "jsx"
-scope = "source.jsx"
-injection-regex = "jsx"
-file-types = ["jsx"]
-roots = []
-comment-token = "//"
-language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "javascriptreact" }
-indent = { tab-width = 2, unit = "  " }
-grammar = "javascript"
-
-[[language]]
-name = "typescript"
-scope = "source.ts"
-injection-regex = "(ts|typescript)"
-file-types = ["ts"]
-shebangs = []
-roots = []
-# TODO: highlights-params
-language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "typescript"}
-indent = { tab-width = 2, unit = "  " }
-
-[[grammar]]
-name = "typescript"
-source = { git = "https://github.com/tree-sitter/tree-sitter-typescript", rev = "3e897ea5925f037cfae2e551f8e6b12eec2a201a", subpath = "typescript" }
-
-[[language]]
-name = "tsx"
-scope = "source.tsx"
-injection-regex = "(tsx)" # |typescript
-file-types = ["tsx"]
-roots = []
-# TODO: highlights-params
-language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "typescriptreact" }
-indent = { tab-width = 2, unit = "  " }
-
-[[grammar]]
-name = "tsx"
-source = { git = "https://github.com/tree-sitter/tree-sitter-typescript", rev = "3e897ea5925f037cfae2e551f8e6b12eec2a201a", subpath = "tsx" }
-
-# Python
-
-[[language]]
-name = "python"
-scope = "source.python"
-injection-regex = "python"
-file-types = ["py"]
-shebangs = ["python"]
-roots = []
-comment-token = "#"
-language-server = { command = "pyls" }
-# TODO: pyls needs utf-8 offsets
-indent = { tab-width = 4, unit = "    " }
-
-[[grammar]]
-name = "python"
-source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "de221eccf9a221f5b85474a553474a69b4b5784d" }
-
-# Elixir
-
-[[language]]
-name = "elixir"
-scope = "source.elixir"
-injection-regex = "(elixir|ex)"
-file-types = ["ex", "exs", "mix.lock"]
-shebangs = ["elixir"]
-roots = ["mix.exs", "mix.lock"]
-comment-token = "#"
-language-server = { command = "elixir-ls" }
-config = { elixirLS.dialyzerEnabled = false }
-indent = { tab-width = 2, unit = "  " }
-
-[[grammar]]
-name = "elixir"
-source = { git = "https://github.com/elixir-lang/tree-sitter-elixir", rev = "b20eaa75565243c50be5e35e253d8beb58f45d56"  }

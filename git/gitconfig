@@ -12,7 +12,5 @@
 [user]
   name = David Besserman
   email = david.besserman@gmail.com
-[init]
-  templatedir = ~/.git_template
 [core]
   editor = vim
